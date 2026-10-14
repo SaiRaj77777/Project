@@ -3,31 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NexusShop — Modern E‑Commerce</title>
+    <title>Vinay Stores — Modern E‑Commerce</title>
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
     <style>
         /* ========== ROOT VARIABLES ========== */
         :root {
-            --bg: #fafaf8;
-            --bg-card: #ffffff;
-            --primary: #1a1a2e;
-            --primary-light: #2d2d44;
-            --accent: #e07a5f;
-            --accent-light: #f4d0c4;
-            --accent-dark: #c05a3e;
-            --muted: #6b6b7a;
-            --muted-light: #a0a0b0;
-            --surface: #f0efed;
-            --success: #2a9d8f;
-            --warning: #e9c46a;
+            --bg: #F7F5EF;
+            --bg-card: #FFFFFF;
+            --primary: #12372A;
+            --primary-light: #1D5140;
+            --accent: #C6A15B;
+            --accent-light: #F1E4C1;
+            --accent-dark: #987536;
+            --muted: #59665F;
+            --muted-light: #8A968E;
+            --surface: #EAE7DC;
+            --success: #27856B;
+            --warning: #E5BC62;
             --radius: 16px;
             --radius-sm: 10px;
-            --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
-            --shadow-hover: 0 12px 48px rgba(26, 26, 46, 0.10);
+            --shadow: 0 4px 24px rgba(18, 55, 42, 0.06);
+            --shadow-hover: 0 12px 48px rgba(18, 55, 42, 0.10);
             --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             --container: 1240px;
         }
@@ -42,7 +42,7 @@
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
             background: var(--bg);
             color: var(--primary);
             line-height: 1.5;
@@ -115,7 +115,7 @@
             background: var(--accent-dark);
             border-color: var(--accent-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(224, 122, 95, 0.30);
+            box-shadow: 0 8px 24px rgba(198, 161, 91, 0.30);
         }
         .btn-secondary {
             background: var(--primary);
@@ -126,12 +126,12 @@
             background: var(--primary-light);
             border-color: var(--primary-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 26, 46, 0.20);
+            box-shadow: 0 8px 24px rgba(18, 55, 42, 0.20);
         }
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            border-color: rgba(26, 26, 46, 0.15);
+            border-color: rgba(18, 55, 42, 0.15);
         }
         .btn-outline:hover {
             background: var(--primary);
@@ -162,7 +162,7 @@
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(26, 26, 46, 0.04);
+            border-bottom: 1px solid rgba(18, 55, 42, 0.04);
         }
         .header-inner {
             display: flex;
@@ -271,7 +271,7 @@
         .search-wrap:focus-within {
             border-color: var(--accent);
             background: #fff;
-            box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.10);
+            box-shadow: 0 0 0 4px rgba(198, 161, 91, 0.10);
         }
         .search-wrap input {
             border: 0;
@@ -312,7 +312,7 @@
         #mobileMenu {
             display: none;
             background: #fff;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(18, 55, 42, 0.04);
             padding: 12px 0 20px;
         }
         #mobileMenu ul {
@@ -349,7 +349,7 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 20px 24px 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            background: linear-gradient(135deg, #12372A 0%, #1D5140 100%);
         }
         .hero::before {
             content: '';
@@ -365,7 +365,7 @@
         }
         .hero .badge {
             display: inline-block;
-            background: rgba(224, 122, 95, 0.20);
+            background: rgba(198, 161, 91, 0.20);
             color: var(--accent);
             padding: 4px 16px;
             border-radius: 999px;
@@ -375,7 +375,7 @@
             margin-bottom: 16px;
         }
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Space Grotesk', 'DM Sans', sans-serif;
             font-size: 48px;
             font-weight: 700;
             color: #fff;
@@ -478,6 +478,28 @@
             font-size: 13px;
             color: var(--muted);
             margin-top: 4px;
+        }
+
+        /* Accessible focus styles and clear product feedback */
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+        .product-status {
+            margin: -18px 0 22px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .cat-card {
+            width: 100%;
+            font: inherit;
+            color: inherit;
+        }
+        .wish-btn.is-wished {
+            color: var(--accent);
+        }
+        .wish-btn.is-wished i {
+            font-weight: 900;
         }
 
         /* ========== PRODUCTS ========== */
@@ -853,7 +875,7 @@
         footer {
             margin-top: 16px;
             padding: 44px 0 28px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(18, 55, 42, 0.04);
         }
         .footer-grid {
             display: grid;
@@ -914,7 +936,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid rgba(18, 55, 42, 0.04);
             color: var(--muted-light);
             font-size: 13px;
         }
@@ -1116,6 +1138,17 @@
                 font-size: 13px;
             }
         }
+
+        /* ========== UPDATED EMERALD & CHAMPAGNE THEME ========== */
+        body { font-family: 'DM Sans', system-ui, sans-serif; letter-spacing: 0.005em; }
+        h1, h2, h3, h4, .logo, .hero-title, .section-title { font-family: 'Space Grotesk', 'DM Sans', sans-serif; letter-spacing: -0.035em; }
+        .btn, button, input, select, textarea { font-family: 'DM Sans', system-ui, sans-serif; }
+        .btn-primary, .primary-btn { background: linear-gradient(135deg, #C6A15B, #987536); }
+        .hero { background: linear-gradient(135deg, #12372A 0%, #1D5140 100%); }
+        .category-card, .product-card, .deal-card, .newsletter-card { border-radius: 18px; }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 3px solid #C6A15B; outline-offset: 3px;
+        }
     </style>
 </head>
 
@@ -1152,7 +1185,7 @@
 
                 <div class="header-actions">
                     <button class="icon-btn" title="Account" aria-label="Account"><i class="far fa-user"></i></button>
-                    <button class="icon-btn" title="Wishlist" aria-label="Wishlist"><i class="far fa-heart"></i></button>
+                    <button class="icon-btn" id="wishlistBtn" title="Wishlist" aria-label="Wishlist"><i class="far fa-heart"></i></button>
                     <div class="cart-wrap">
                         <button class="icon-btn" id="cartBtn" title="Cart" aria-label="Cart">
                             <i class="fas fa-shopping-bag"></i>
@@ -1219,6 +1252,7 @@
                     </div>
                     <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
                 </div>
+                <p class="product-status" id="productStatus" aria-live="polite">Showing all products</p>
                 <div class="products-grid" id="productsGrid" aria-live="polite"></div>
             </div>
         </section>
@@ -1292,7 +1326,7 @@
                     <form id="newsletterForm" onsubmit="return false;">
                         <input type="email" id="newsletterEmail" placeholder="Enter your email" aria-label="Email" required />
                         <button class="btn" id="subscribeBtn"><i class="fas fa-paper-plane"></i> Subscribe</button>
-                        <div id="newsletterMsg"></div>
+                        <div id="newsletterMsg" role="status" aria-live="polite"></div>
                     </form>
                 </div>
             </div>
@@ -1345,7 +1379,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; <span id="year"></span> NexusShop. All rights reserved.
+                &copy; <span id="year"></span> Vinay Stores. All rights reserved.
             </div>
         </div>
     </footer>
@@ -1427,6 +1461,7 @@
         // ============================================================
         const categoriesGrid = document.getElementById('categoriesGrid');
         const productsGrid = document.getElementById('productsGrid');
+        const productStatus = document.getElementById('productStatus');
         const cartCountEl = document.getElementById('cartCount');
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
@@ -1443,7 +1478,8 @@
         function renderCategories() {
             categoriesGrid.innerHTML = '';
             CATEGORIES.forEach(cat => {
-                const el = document.createElement('div');
+                const el = document.createElement('button');
+                el.type = 'button';
                 el.className = 'cat-card';
                 el.innerHTML = `
                     <div class="icon-wrap"><i class="fas ${cat.icon}"></i></div>
@@ -1461,9 +1497,10 @@
 
         function renderProducts(list) {
             productsGrid.innerHTML = '';
+            productStatus.textContent = `Showing ${list.length} product${list.length === 1 ? '' : 's'}`;
             if (!list.length) {
                 productsGrid.innerHTML =
-                `<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);">No products found.</p>`;
+                `<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);">No products found. Try another search or choose a category.</p>`;
                 return;
             }
             list.forEach(p => {
@@ -1506,6 +1543,18 @@
                     addToCart(id, this);
                 });
             });
+
+            // Wishlist buttons toggle on/off and announce the change.
+            productsGrid.querySelectorAll('.wish-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const wished = btn.classList.toggle('is-wished');
+                    btn.setAttribute('aria-label', wished ? 'Remove from wishlist' : 'Add to wishlist');
+                    btn.innerHTML = wished
+                        ? '<i class="fas fa-heart" aria-hidden="true"></i>'
+                        : '<i class="far fa-heart" aria-hidden="true"></i>';
+                    showNotice(wished ? 'Added to your wishlist.' : 'Removed from your wishlist.');
+                });
+            });
         }
 
         function renderTestimonials() {
@@ -1532,6 +1581,22 @@
         // ============================================================
         // UTILITY FUNCTIONS
         // ============================================================
+        function showNotice(message) {
+            // Use a small, non-blocking status message instead of interrupting the shopper.
+            let notice = document.getElementById('shopNotice');
+            if (!notice) {
+                notice = document.createElement('div');
+                notice.id = 'shopNotice';
+                notice.setAttribute('role', 'status');
+                notice.style.cssText = 'position:fixed;right:20px;bottom:20px;z-index:200;background:var(--primary);color:#fff;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow-hover);max-width:calc(100vw - 40px);';
+                document.body.appendChild(notice);
+            }
+            notice.textContent = message;
+            notice.hidden = false;
+            clearTimeout(notice.hideTimer);
+            notice.hideTimer = setTimeout(() => { notice.hidden = true; }, 2400);
+        }
+
         function escapeHtml(text) {
             return String(text).replace(/[&<>"']/g, s => ({
                 '&': '&amp;',
@@ -1618,8 +1683,10 @@
 
         // Search
         searchBtn.addEventListener('click', () => filterProducts(searchInput.value));
+        searchInput.addEventListener('input', () => filterProducts(searchInput.value));
         searchInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') filterProducts(e.target.value);
+            if (e.key === 'Escape') { searchInput.value = ''; filterProducts(''); }
         });
 
         // Mobile menu
@@ -1651,6 +1718,7 @@
             updateCartCount();
             const orig = this.innerHTML;
             this.innerHTML = '<i class="fas fa-check"></i> Added!';
+            showNotice('Flash deal added to your cart.');
             this.style.background = 'var(--success)';
             setTimeout(() => {
                 this.innerHTML = orig;
@@ -1682,6 +1750,12 @@
             alert(`🛒 Your cart has ${cartCount} item${cartCount !== 1 ? 's' : ''}.`);
         });
 
+        // Header wishlist shortcut gives a helpful hint when no product is selected.
+        document.getElementById('wishlistBtn').addEventListener('click', () => {
+            const wishedCount = document.querySelectorAll('.wish-btn.is-wished').length;
+            showNotice(wishedCount ? `You have ${wishedCount} item${wishedCount === 1 ? '' : 's'} in your wishlist.` : 'Tap a heart on any product to save it.');
+        });
+
         // Year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -1701,7 +1775,7 @@
             }
         });
 
-        console.log('🚀 NexusShop — user‑friendly e‑commerce demo loaded.');
+        console.log('🚀 Vinay Stores — user‑friendly e‑commerce demo loaded.');
     </script>
 
 </body>
